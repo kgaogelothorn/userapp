@@ -1,21 +1,94 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div  class="l-container u-padding--none u-margin--tp-sm">
+  <div  class="row">
+    <div  class="u-content--center">
+      <div  class="c-card u-text--centered">
+        <div class="c-card__content u-padding--none u-border--none">
+          <div  class="c-card__header u-border--bottom"> 
+            <img *ngIf="isloaded" class="u-image u-image--150 u-image--rounded" [src]="userData.picture.large"/>
+             
+          </div>
+        
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My name is
+            </h3>
+             <h2  class="c-card__title u-text--lg">{{userData.name.first}}</h2>
+          </div>
+
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My email address is
+            </h3>
+             <h2  class="c-card__title u-text--lg">amsterda</h2>
+          </div>
+
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My birthday is
+            </h3>
+             <h2  class="c-card__title u-text--lg">amsterda</h2>
+          </div>
+
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My address is
+            </h3>
+             <h2  class="c-card__title u-text--lg">amsterda</h2>
+          </div>
+
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My phone number  is
+            </h3>
+             <h2  class="c-card__title u-text--lg">amsterda</h2>
+          </div>
+
+          <div>
+            <h3 class="c-card__subtitle u-margin--none">
+              My password is
+            </h3>
+             <h2  class="c-card__title u-text--lg">amsterda</h2>
+          </div>
+
+
+          <ul class="c-tabs l-row u-grid-justify--center u-padding--md">
+            <li  class="c-tabs__list">
+              <a class="c-tabs__link u-padding--sm">
+                <img class="u-image--24" src="./assets/icons/svg/misc/user.svg"/>
+              </a>
+            </li>
+            <li  class="c-tabs__list">
+              <a  class="c-tabs__link u-padding--sm">
+                <img class="u-image--24" src="./assets/icons/svg/misc/email.svg"/>
+              </a>
+            </li>
+            <li  class="c-tabs__list">
+              <a  class="c-tabs__link u-padding--sm"
+                ><img class="u-image--24" src="./assets/icons/svg/misc/calendar.svg" />
+              </a>
+            </li>
+            <li  class="c-tabs__list">
+              <a  class="c-tabs__link u-padding--sm">
+                <img class="u-image--24" src="./assets/icons/svg/misc/map-location.svg" />
+              </a>
+            </li>
+            <li  class="c-tabs__list">
+              <a  class="c-tabs__link u-padding--sm">
+                <img class="u-image--24"
+                  src="./assets/icons/svg/misc/call.svg"
+              /></a>
+            </li>
+            <li  class="c-tabs__list">
+              <a  class="c-tabs__link u-padding--sm">
+                <img class="u-image--24" src="./assets/icons/svg/misc/locked.svg"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
