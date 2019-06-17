@@ -1,86 +1,85 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="header">
 
+</div>
 <div  class="l-container u-padding--none u-margin--tp-sm">
   <div  class="row">
     <div  class="u-content--center">
-      <div  class="c-card u-text--centered">
+      <div  class="c-card u-text--centered animated slow zoomIn">
         <div class="c-card__content u-padding--none u-border--none">
           <div  class="c-card__header u-border--bottom"> 
-            <img *ngIf="isloaded" class="u-image u-image--150 u-image--rounded" [src]="userData.picture.large"/>
-             
+            <img *ngIf="userData.image" class="u-image u-image--150 u-image--rounded animated slow zoomIn" [src]="userData.image"/>
           </div>
-        
-          <div>
+          <div *ngIf="showItems.name" class="animated zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My name is
             </h3>
-             <h2  class="c-card__title u-text--lg">{{userData.name.first}}</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.firstname}} {{userData.lastname}}</h2>
           </div>
 
-          <div>
+          <div *ngIf="showItems.email" class="animated zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My email address is
             </h3>
-             <h2  class="c-card__title u-text--lg">amsterda</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.email}}</h2>
           </div>
 
-          <div>
+          <div *ngIf="showItems.birthday" class="animated zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My birthday is
             </h3>
-             <h2  class="c-card__title u-text--lg">amsterda</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.birthDate | date:'dd/MM/yyyy'}}</h2>
           </div>
 
-          <div>
+          <div *ngIf="showItems.address" class="animated zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My address is
             </h3>
-             <h2  class="c-card__title u-text--lg">amsterda</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.location}}</h2>
           </div>
 
-          <div>
+          <div *ngIf="showItems.phone" class="animated zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My phone number  is
             </h3>
-             <h2  class="c-card__title u-text--lg">amsterda</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.phone}}</h2>
           </div>
 
-          <div>
+          <div *ngIf="showItems.password" class="animated  zoomIn">
             <h3 class="c-card__subtitle u-margin--none">
               My password is
             </h3>
-             <h2  class="c-card__title u-text--lg">amsterda</h2>
+             <h2  class="c-card__title u-text--lg">{{userData.password}}</h2>
           </div>
 
 
           <ul class="c-tabs l-row u-grid-justify--center u-padding--md">
-            <li  class="c-tabs__list">
+            <li (mouseover)="show('name')"  class="c-tabs__list animated zoomIn" [class.active]="showItems.name">
               <a class="c-tabs__link u-padding--sm">
-                <img class="u-image--24" src="./assets/icons/svg/misc/user.svg"/>
+                <img class="u-image--24 " src="./assets/icons/svg/misc/user.svg"/>
               </a>
             </li>
-            <li  class="c-tabs__list">
+            <li  (mouseover)="show('email')" class="c-tabs__list"  [class.active]="showItems.email">
               <a  class="c-tabs__link u-padding--sm">
                 <img class="u-image--24" src="./assets/icons/svg/misc/email.svg"/>
               </a>
             </li>
-            <li  class="c-tabs__list">
+            <li (mouseover)="show('birthday')" class="c-tabs__list" [class.active]="showItems.birthday">
               <a  class="c-tabs__link u-padding--sm"
                 ><img class="u-image--24" src="./assets/icons/svg/misc/calendar.svg" />
               </a>
             </li>
-            <li  class="c-tabs__list">
+            <li  (mouseover)="show('address')" class="c-tabs__list" [class.active]="showItems.address">
               <a  class="c-tabs__link u-padding--sm">
                 <img class="u-image--24" src="./assets/icons/svg/misc/map-location.svg" />
               </a>
             </li>
-            <li  class="c-tabs__list">
+            <li  (mouseover)="show('phone')" class="c-tabs__list" [class.active]="showItems.phone">
               <a  class="c-tabs__link u-padding--sm">
                 <img class="u-image--24"
                   src="./assets/icons/svg/misc/call.svg"
               /></a>
             </li>
-            <li  class="c-tabs__list">
+            <li  (mouseover)="show('password')" class="c-tabs__list" [class.active]="showItems.password">
               <a  class="c-tabs__link u-padding--sm">
                 <img class="u-image--24" src="./assets/icons/svg/misc/locked.svg"/>
               </a>

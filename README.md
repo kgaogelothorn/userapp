@@ -1,10 +1,20 @@
 # Userapp
 A simple app to display user data
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+## Prerequisite
+Node.js and NPM installed (http://nodejs.org)
+
+## Packages Used
+`Angular-cli version 7.3.8` <br />
+`Angular v7` <br />
+`Webpack` <br />
+`Animate css`
+
+## Installing Dependecies
+1. Clone this project from git (https://github.com/kgaogelothorn/userapp.git)
+2. After cloning navigate to the `userapp` folder run `npm install` to download required dependencies
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
